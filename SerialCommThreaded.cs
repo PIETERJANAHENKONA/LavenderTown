@@ -18,7 +18,7 @@ using System;
 
 public class SerialCommThreaded : MonoBehaviour
 {
-    public string portName = "COM3";
+    public string portName = "COM5";
     public SerialPort sp;
     private bool blnPortcanopen = false; //if portcanopen is true the selected comport is open
 
