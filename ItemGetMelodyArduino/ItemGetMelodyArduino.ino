@@ -112,10 +112,14 @@ if (Serial.available()){
   
   if(Serial.read()== 'A')
   {
-   //startPlayback(sample, sizeof(sample));
 
-   tone(speaker,2000,500);
-   
+   tone(speaker,NOTE_F5,750);
+   delay(150);
+   tone(speaker,NOTE_FS5,750);
+   delay(150);
+   tone(speaker,NOTE_G5,750);
+   delay(150);
+   tone(speaker,NOTE_GS5,1000);
    delay(500);
   
   }
