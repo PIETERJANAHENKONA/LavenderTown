@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3470754110
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7f450cc48f0ce7eb3c671f626d72862c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/LeftHandController.controller
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/RightHandController.controller
+Dependencies:
+- C:/Users/pjmon/OneDrive/Documenten/2020/3D_Developement/LavenderTown/LavenderTown/FinalVRPRoject/OVRAssetBundles/OVRMasterBundle/asset_fbx0

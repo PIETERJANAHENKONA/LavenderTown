@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 813229677
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 88253cfc3729e4415b1f1e43dcb3f9d2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: def2bc6467cb9fa38fe2d2f4733ddfe7
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Materials/New Material.mat
+- Assets/Materials/New Material 2.mat
+- Assets/Materials/New Material 1.mat
+- Assets/Materials/New Material 5.mat
+- Assets/Materials/New Material 4.mat
+- Assets/Materials/Default.mat
+- Assets/Materials/New Material 3.mat
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
+Dependencies: []

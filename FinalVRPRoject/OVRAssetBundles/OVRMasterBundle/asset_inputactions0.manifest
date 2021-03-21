@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 2847974816
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0c0ff1e37f3294194e0fc17c0ef6defe
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 794d5aaff6c9fb6134240c7bbdfd10e6
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Samples/XR Interaction Toolkit/1.0.0-pre.2/Default Input Actions/XRI Default
+  Input Actions.inputactions
+Dependencies: []
