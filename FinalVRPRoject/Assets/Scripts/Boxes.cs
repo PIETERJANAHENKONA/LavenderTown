@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.IO.Ports;
+using System.Threading;
+using System;
 
 public class Boxes : MonoBehaviour
 
 {
+    public static SerialPort arduinoPort = new SerialPort("COM5", 9600);
     public static Dictionary<string, bool> CompletedPuzzels;
+
+    private bool blnPortcanopen = false;
 
     protected static bool _openTheDoor;
 
@@ -24,6 +29,8 @@ public class Boxes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        OpenConnection();
+        
         _openTheDoor = false;
         CompletedPuzzels = new Dictionary<string, bool>();
 
@@ -58,6 +65,9 @@ public class Boxes : MonoBehaviour
             print(BoxColor+"Puzzel solved!");
 
             CompletedPuzzels[BoxColor + "Solved"] = true;
+
+            arduinoPort.Write("A");
+            print("A");
 
             if (CheckIfAllPuzzelsSolved() == true)
             {
@@ -120,5 +130,38 @@ public class Boxes : MonoBehaviour
 
         return AllSolved;
 
+    }
+    public void OpenConnection()
+    {
+        if (arduinoPort != null)
+        {
+            if (arduinoPort.IsOpen)
+            {
+                string message = "Port is already open!";
+                Debug.Log(message);
+            }
+            else
+            {
+                try
+                {
+                    arduinoPort.Open();  // opens the connection
+                    blnPortcanopen = true;
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(e.Message);
+                    blnPortcanopen = false;
+                }
+                if (blnPortcanopen)
+                {
+                    arduinoPort.ReadTimeout = 20;  // sets the timeout value before reporting error
+                    Debug.Log("Port Opened!");
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("Port == null");
+        }
     }
 }
