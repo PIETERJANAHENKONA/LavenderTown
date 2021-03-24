@@ -12,7 +12,9 @@ public class AiBehaviour : MonoBehaviour
     public float health;
 
     //wandering
-    public Vector3 walkPoint;
+    private Vector3 walkpoint0;
+    public Vector3 walkpoint1;
+    public Vector3 walkpoint2;
     bool walkPointSet;
     public float walkPointRange;
 
@@ -46,23 +48,31 @@ public class AiBehaviour : MonoBehaviour
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
-            agent.SetDestination(walkPoint);
+            agent.SetDestination(walkpoint0);
 
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
+        Vector3 distanceToWalkPoint = transform.position - walkpoint0;
 
-        //Walkpoint reached
+
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
     private void SearchWalkPoint()
     {
-        //Calculate random point in range
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        //float randomZ = Random.Range(-walkPointRange, walkPointRange);
+        //float randomX = Random.Range(-walkPointRange, walkPointRange);
+        //walkpoint0 = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
+        if (walkpoint0 == walkpoint1)
+        {
+            walkpoint0 = walkpoint2;
+        }
+        else
+        {
+            walkpoint0 = walkpoint1;
+        }
+
+        if (Physics.Raycast(walkpoint0, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
 

@@ -4461,7 +4461,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   health: 0
-  walkPoint: {x: -11, y: 1.2, z: -11}
+  walkpoint1: {x: -25, y: 1.2, z: -11}
+  walkpoint2: {x: 4, y: 1.2, z: -11}
   walkPointRange: 5
   timeBetweenAttacks: 0
   sightRange: 5
@@ -4677,7 +4678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64342879300832151}
   m_LocalRotation: {x: -0, y: -0.7071064, z: -0, w: 0.7071072}
-  m_LocalPosition: {x: -10.9876995, y: 1.2, z: -11.012258}
+  m_LocalPosition: {x: 4, y: 1.2, z: -11}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
