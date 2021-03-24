@@ -30,6 +30,7 @@ public class AiBehaviour : MonoBehaviour
     {
         player = GameObject.Find("XR Rig").transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
     }
 
     private void Update()
