@@ -8,12 +8,14 @@ using UnityEngine;
 public class PivotDoor : MonoBehaviour
 {
     protected bool levelSucceeded = false;
-    protected float openDoorSpeed = -0.1f;
-    private int doorangle = 0;
-
+    protected float openDoorSpeed = -0.5f;
+    public bool opendoor;
     public Boxes newBox ;
+    private bool stopOpeningtheDoor = false;
+    public int doorAngle = 0;
 
-   
+
+
 
 
 
@@ -31,11 +33,17 @@ public class PivotDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        opendoor = newBox._OpenTheDoor;
 
-        if (newBox._OpenTheDoor == true)
+        if (stopOpeningtheDoor == false)
         {
-            OpenDoor();
+            if (opendoor == true)
+            {
+                OpenDoor();
+            }
+
         }
+       
 
 
 
@@ -44,11 +52,14 @@ public class PivotDoor : MonoBehaviour
 
     public void OpenDoor()
     {
-        if (doorangle < 1400)
-        {           
-                transform.Rotate(0, 0, openDoorSpeed);
+       
+        transform.Rotate(0, 0, openDoorSpeed);
 
-                doorangle++;         
+        doorAngle++;
+
+        if (doorAngle == 280)
+        {
+            stopOpeningtheDoor = true;
         }
     }
 }

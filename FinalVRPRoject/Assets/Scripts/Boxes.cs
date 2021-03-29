@@ -11,6 +11,8 @@ public class Boxes : MonoBehaviour
     public static SerialPort arduinoPort = new SerialPort("COM5", 9600);
     public static Dictionary<string, bool> CompletedPuzzels;
 
+
+
     private bool blnPortcanopen = false;
 
     protected static bool _openTheDoor;
@@ -76,6 +78,8 @@ public class Boxes : MonoBehaviour
                 if (_openTheDoor==false)
                 {
                     _openTheDoor = true;
+
+                    
 
                 }
 
